@@ -1,4 +1,4 @@
-**Status: em andamento.**
+**Status: concluído.**
 
 <br>
 
@@ -14,5 +14,5 @@
 
 <br>
 
-<!-- Clique neste link para visualizar o projeto concluído:
-https://clayton-klein.github.io/tailwind-p5-fylo/ -->
+Clique neste link para visualizar o projeto:
+https://clayton-klein.github.io/tailwind-p5-fylo/
