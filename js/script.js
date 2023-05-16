@@ -1,19 +1,38 @@
+/**
+ * Credit:
+ * https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
+ */
+
 const themeToggleBtn = document.getElementById("theme-toggle");
 const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 const themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
+/**
+ * check if dark mode is set in localStorage or in the browser's config
+ * and add/remove the "dark" class to the <html> element accordingly.
+ */
 if (
   localStorage.getItem("color-theme") === "dark" ||
   (!("color-theme" in localStorage) &&
     window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
-  // show light icon
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+// show light or dark icon 
+if (
+  localStorage.getItem("color-theme") === "dark" ||
+  (!("color-theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
   themeToggleLightIcon.classList.remove("hidden");
 } else {
-  // show light icon
   themeToggleDarkIcon.classList.remove("hidden");
 }
 
+// adding theme handler to the button
 themeToggleBtn.addEventListener("click", toggleMode);
 
 function toggleMode() {

@@ -12,26 +12,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script>
-      /**
-       * Credit:
-       * https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
-       */
-
-      /**
-       * check if dark mode is set in localStorage or in the browser's config
-       * and add/remove the "dark" class accordingly to the <html> element.
-       */
-      if (
-        localStorage.getItem("color-theme") === "dark" ||
-        (!("color-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
     <script src="./js/script.js" defer></script>
     <title>Fylo</title>
   </head>
